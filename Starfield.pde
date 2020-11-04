@@ -44,11 +44,11 @@ class Oddball extends Particle {
   
   void show() {
     noStroke();
-    fill(0, 255, 0);
+    fill(41, 33, 12);
     ellipse((float)myX, (float)myY, (float)mySize, (float)mySize);
-    fill(0, 150, 0);
+    fill(26, 20, 7);
     ellipse((float)myX + (float)mySize/2, (float)myY + (float)mySize/2, (float)mySize, (float)mySize);
-    fill(0, 70, 0);
+    fill(64, 43, 3);
     ellipse((float)myX - (float)mySize/2, (float)myY + (float)mySize/2, (float)mySize, (float)mySize);
   }
 }
