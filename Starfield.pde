@@ -38,7 +38,7 @@ class Oddball extends Particle {
     }
     float a = dist((float)myX, (float)myY, 300, 300);
     mySize = map((float)a, 0, 300, 0, 30);
-    mySpeed = map((float)a, 0, 300, 0, 30);
+    mySpeed = map((float)a, 0, 300, 0, 20);
   
   }
   
@@ -46,6 +46,10 @@ class Oddball extends Particle {
     noStroke();
     fill(0, 255, 0);
     ellipse((float)myX, (float)myY, (float)mySize, (float)mySize);
+    fill(0, 150, 0);
+    ellipse((float)myX + (float)mySize/2, (float)myY + (float)mySize/2, (float)mySize, (float)mySize);
+    fill(0, 70, 0);
+    ellipse((float)myX - (float)mySize/2, (float)myY + (float)mySize/2, (float)mySize, (float)mySize);
   }
 }
 class Particle {
