@@ -56,6 +56,7 @@ class Particle {
 
   
   double myX, myY, mySpeed, myAngle, mySize;
+  color myColor = color(0, 0, 0);
   
   Particle() {
     mySize = 0;
@@ -63,6 +64,7 @@ class Particle {
     myY = random(0, 600);
     myAngle = Math.random()*2*Math.PI;
     mySpeed = random(10);
+    myColor = color(random(180, 255), random(220, 255), 255);
   }
   
   void move() {
@@ -88,11 +90,9 @@ class Particle {
       } else {
         mod = 255;
       }
-      fill(255, 255, 255, mod);
+      fill(myColor, mod);
       ellipse((float)myX - (float)Math.cos(myAngle) * i, 
       (float)myY - (float)Math.sin(myAngle) * i, (float)mySize, (float)mySize);
     }
   }
 }
-
-
